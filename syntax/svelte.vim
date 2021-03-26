@@ -118,7 +118,7 @@ endif
 if s:use_postcss
   call s:LoadSyntax('@SassSyntax', 'postcss')
   runtime! <after/syntax/sass.vim
-endif>
+endif
 
 
 " If CoffeeScript is enabled, load the syntax. Keep name consistent with
