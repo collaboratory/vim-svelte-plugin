@@ -22,8 +22,9 @@ let s:load_full_syntax = svelte#GetConfig('load_full_syntax', 0)
 let s:use_pug = svelte#GetConfig('use_pug', 0)
 let s:use_less = svelte#GetConfig('use_less', 0)
 let s:use_sass = svelte#GetConfig('use_sass', 0)
+let s:use_postcss = svelte#GetConfig('use_postcss', 1)
 let s:use_coffee = svelte#GetConfig('use_coffee', 0)
-let s:use_typescript = svelte#GetConfig('use_typescript', 0)
+let s:use_typescript = svelte#GetConfig('use_typescript', 1)
 "}}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
