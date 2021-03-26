@@ -117,7 +117,7 @@ endif
 " If postcss is enabled, load postcss syntax 
 if s:use_postcss
   call s:LoadSyntax('@SassSyntax', 'postcss')
-  runtime! <after/syntax/sass.vim
+  runtime! after/syntax/sass.vim
 endif
 
 
