@@ -116,9 +116,9 @@ endif
 
 " If postcss is enabled, load postcss syntax 
 if s:use_postcss
-  call s:LoadSyntax('@PostcssSyntax', 'postcss')
-  runtime! after/syntax/postcss.vim
-endif
+  call s:LoadSyntax('@SassSyntax', 'postcss')
+  runtime! <after/syntax/sass.vim
+endif>
 
 
 " If CoffeeScript is enabled, load the syntax. Keep name consistent with
@@ -209,11 +209,11 @@ syntax region cssScssSvelteStyle fold
 syntax region cssPostcssSvelteStyle fold
       \ start=+<style[^>]*lang="postcss"[^>]*>+ 
       \ end=+</style>+ 
-      \ keepend contains=@PostcssSyntax,svelteTag
-syntax region cssPostcssSvelteStyle fold
+      \ keepend contains=@SassSyntax,svelteTag
+syntax region cssPcssSvelteStyle fold
       \ start=+<style[^>]*lang="pcss"[^>]*>+ 
       \ end=+</style>+ 
-      \ keepend contains=@PostcssSyntax,svelteTag
+      \ keepend contains=@SassSyntax,svelteTag
 
 syntax region svelteTag 
       \ start=+^<[^/]+ end=+>+  skip=+></+
@@ -263,8 +263,8 @@ endif
 if s:use_postcss
   silent! syntax clear postcssDefinition
   syntax region cssPostcssDefinition matchgroup=cssBraces 
-        \ contains=@PostcssSyntax,cssPostcssDefinition
-        \ contained containedin=cssPostcssSvelteStyle,cssPostcssSvelteStyle
+        \ contains=@SassSyntax,cssPostcssDefinition
+        \ contained containedin=cssPostcssSvelteStyle,cssPcssSvelteStyle
         \ start="{" end="}" 
 endif
 
